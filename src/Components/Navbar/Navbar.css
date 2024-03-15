@@ -1,0 +1,46 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    z-index: 999999999;
+
+
+}
+.color{
+    background-color: black;
+}
+nav .hamburger{
+    display: none;
+}
+nav .menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+@media(max-width:700px){
+    nav .hamburger{
+        display: block;
+    }
+    .menu{
+     
+    position: absolute;
+    height: 100vh;
+    z-index: -1;
+    width: 100%;
+    top: 0vh;
+    left: -100%;
+    flex-direction: column;
+    gap: 30px;
+    background-color: rgba(0, 0, 0, 0.9);
+  
+
+    }
+    .active{
+        left:0;
+    }
+}
